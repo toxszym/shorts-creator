@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { probeDuration, run } from "./ffmpeg";
@@ -23,13 +24,22 @@ export const saySynthesize: Synthesize = async (text, outPath) => {
   await run("say", ["-v", "Zosia", "-r", "195", "-o", outPath, "--data-format=LEI16@44100", text]);
 };
 
-/** Fallback voice on Linux: Polish espeak-ng voice. Writes 22.05 kHz WAV; voiceSentences resamples it. */
-export const espeakSynthesize: Synthesize = async (text, outPath) => {
-  await run("espeak-ng", ["-v", "pl", "-s", "175", "-w", outPath, text]);
+/** Piper binary and voice downloaded by `pnpm fetch:voice`. */
+const PIPER_DIR = path.resolve(__dirname, "../../../.cache/piper");
+const PIPER_BIN = path.join(PIPER_DIR, "piper/piper");
+const PIPER_MODEL = path.join(PIPER_DIR, "voices/pl_PL-mc_speech-medium.onnx");
+
+/** Fallback voice on Linux: neural Polish voice mc_speech in Piper. Writes 22.05 kHz WAV; voiceSentences resamples it. */
+export const piperSynthesize: Synthesize = async (text, outPath) => {
+  if (!existsSync(PIPER_BIN) || !existsSync(PIPER_MODEL)) {
+    throw new Error(`Piper or its voice is missing in ${PIPER_DIR}. Run \`pnpm fetch:voice\`.`);
+  }
+  // Piper reads text from stdin and treats every line as a separate utterance, so the sentence goes in as one line.
+  await run(PIPER_BIN, ["--model", PIPER_MODEL, "--output_file", outPath, "--quiet"], { input: text.replace(/\s+/g, " ") });
 };
 
-/** System voice for the current platform: `say` on macOS, espeak-ng elsewhere. */
-export const systemSynthesize: Synthesize = process.platform === "darwin" ? saySynthesize : espeakSynthesize;
+/** System voice for the current platform: `say` on macOS, Piper elsewhere. */
+export const systemSynthesize: Synthesize = process.platform === "darwin" ? saySynthesize : piperSynthesize;
 
 /** Rozkłada czas zdania na słowa proporcjonalnie do ich długości, z pauzą po znakach przestankowych. */
 function estimateWords(text: string, start: number, end: number): Word[] {
