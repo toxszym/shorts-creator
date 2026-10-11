@@ -1,0 +1,7 @@
+node_modules
+dist
+.next
+out
+.env
+.cache
+data/objects.live.json

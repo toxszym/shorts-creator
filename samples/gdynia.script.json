@@ -1,0 +1,19 @@
+{
+  "id": "gdynia",
+  "topic": "Gdynia w archiwum",
+  "hooks": {
+    "kronika": "Gdynia w obiektywie archiwów.",
+    "storytime": "Opowiem ci o Gdyni, której już nie ma.",
+    "brainrot": "Tej Gdyni już nie zobaczysz."
+  },
+  "scenes": [
+    { "text": "Około 1930 roku cumowały tu łodzie rybackie.", "source_quote": "fishing boats in Gdynia, around 1930", "asset_id": "obj_44251406" },
+    { "text": "W lipcu 1930 z wizytą przypłynęły duńskie okręty podwodne.", "source_quote": "Duńskie okręty podwodne podczas wizyty w Gdyni.", "asset_id": "obj_112375868" },
+    { "text": "Henryk Poddębski sfotografował Bank Gospodarstwa Krajowego i pocztę.", "source_quote": "Bank Gospodarstwa Krajowego i poczta - widok zewnętrzny budynków.", "asset_id": "obj_74308748" },
+    { "text": "W 1933 roku stał już gmach Instytutu Morskiego.", "source_quote": "Instytut Morski - widok zewnętrzny budynku.", "asset_id": "obj_74308729" },
+    { "text": "Gdynia była wtedy największym portem na Bałtyku.", "source_quote": "Port morski w Gdyni", "asset_id": "obj_155778374" },
+    { "text": "Po wojnie w Gdyni leżał wrak pancernika Gneisenau.", "source_quote": "Wrak pancernika \"Gneisenau\" w Gdyni.", "asset_id": "obj_91573585" },
+    { "text": "A w porcie odbudowywano dźwig.", "source_quote": "odbudowa dźwigu portowego", "asset_id": "obj_155778374" }
+  ],
+  "punchline": "To wszystko leży w archiwum. Wystarczy sięgnąć."
+}

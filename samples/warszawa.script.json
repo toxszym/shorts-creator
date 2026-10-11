@@ -1,0 +1,19 @@
+{
+  "id": "warszawa",
+  "topic": "Warszawa nad Wisłą przed wojną",
+  "hooks": {
+    "kronika": "Warszawa nad Wisłą w obiektywie Henryka Poddębskiego.",
+    "storytime": "Tak wyglądał weekend w przedwojennej Warszawie.",
+    "brainrot": "Weekend w Warszawie sto lat temu wyglądał tak."
+  },
+  "scenes": [
+    { "text": "W Zielone Świątki na Bielanach kręciła się karuzela.", "source_quote": "Zabawy ludowe w Zielone Świątki. [Karuzela].", "asset_id": "obj_74310080" },
+    { "text": "Ludzie wypoczywali po prostu na trawie.", "source_quote": "ludzie wypoczywajacy na trawie", "asset_id": "obj_74310084" },
+    { "text": "Na karuzelę przychodziło 50 tysięcy osób dziennie.", "source_quote": "Zabawy ludowe w Zielone Świątki.", "asset_id": "obj_74310080" },
+    { "text": "Po Wiśle pływały kajaki, a w tle widać plażę Poniatówka.", "source_quote": "Kajaki na Wiśle w Warszawie. Widoczne plaże: Poniatówka i Braci Kozłowskich.", "asset_id": "obj_74308922" },
+    { "text": "Piaskarze pracowali z widokiem na panoramę Pragi.", "source_quote": "Piaskarze na Wiśle. [Panorama Pragi z lewego brzegu Wisły.", "asset_id": "obj_74302371" },
+    { "text": "A na Wybrzeżu Kościuszkowskim ręcznie roznoszono asfalt.", "source_quote": "Roznoszenie asfaltu. [Wybrzeże Kościuszkowskie.", "asset_id": "obj_74302387" },
+    { "text": "Po meczu kibice wychodzili ze stadionu Legii.", "source_quote": "Po meczu piłki nożnej [na stadionie Legii w Warszawie].", "asset_id": "obj_74302616" }
+  ],
+  "punchline": "Te zdjęcia są w domenie publicznej. Każdy może po nie sięgnąć."
+}

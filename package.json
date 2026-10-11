@@ -1,0 +1,11 @@
+{
+  "name": "kronika-916",
+  "private": true,
+  "scripts": {
+    "fetch:archive": "node scripts/fetch-commons.mjs",
+    "sample": "pnpm --filter @kronika/render sample",
+    "build": "pnpm --filter @kronika/render build && pnpm --filter @kronika/api build",
+    "api": "pnpm --filter @kronika/api start",
+    "web": "pnpm --filter @kronika/web dev"
+  }
+}

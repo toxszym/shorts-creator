@@ -1,0 +1,19 @@
+{
+  "id": "pwk1929",
+  "topic": "Powszechna Wystawa Krajowa 1929",
+  "hooks": {
+    "kronika": "Poznań, rok 1929. Powszechna Wystawa Krajowa.",
+    "storytime": "W 1929 roku cała Polska pojechała do Poznania.",
+    "brainrot": "Polska w 1929 roku zrobiła własne expo."
+  },
+  "scenes": [
+    { "text": "Powszechna Wystawa Krajowa trwała w Poznaniu od maja do września 1929.", "source_quote": "Powszechna Wystawa Krajowa Poznań, maj-wrzesień 1929", "asset_id": "obj_95542356" },
+    { "text": "Wchodziło się od ulicy Bukowskiej.", "source_quote": "wejście z ul. Bukowskiej", "asset_id": "obj_95542356" },
+    { "text": "Nad terenami wschodnimi górowała wieża.", "source_quote": "tereny wschodnie, widok z dziedzińca na wieżę", "asset_id": "obj_95542344" },
+    { "text": "Wystawę odwiedziło 4 miliony gości.", "source_quote": "tereny wschodnie", "asset_id": "obj_95542344" },
+    { "text": "Było też Wesołe Miasteczko.", "source_quote": "\"Wesołe Miasteczko\", fragment.", "asset_id": "obj_95542360" },
+    { "text": "Swoje pawilony miał nawet przemysł likierowy i koniakowy.", "source_quote": "pawilony przemysłu likierowego i koniakowego", "asset_id": "obj_95542350" },
+    { "text": "A przemysłowcy lotniczy pokazali awionetkę Działowskiego.", "source_quote": "awionetki Działowskiego DKD-IV bis", "asset_id": "obj_96210879" }
+  ],
+  "punchline": "Pocztówki z tej wystawy leżą dziś w archiwum cyfrowym."
+}

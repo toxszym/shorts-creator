@@ -1,0 +1,94 @@
+{
+  "endCardSeconds": 3,
+  "styles": {
+    "kronika": {
+      "layout": "full",
+      "look": "archival",
+      "caption": {
+        "font": "Futura",
+        "size": 76,
+        "y": 1500,
+        "wordsPerChunk": 4,
+        "uppercase": false,
+        "highlight": "F5C542",
+        "outline": 6,
+        "maxChars": 22,
+        "tilt": 0
+      },
+      "shotSeconds": 2.4,
+      "yearStamp": true,
+      "music": "assets/audio/beat-slow.m4a",
+      "musicVolume": 0.1
+    },
+    "storytime": {
+      "layout": "full",
+      "look": "punchy",
+      "caption": {
+        "font": "Arial Black",
+        "size": 84,
+        "y": 1480,
+        "wordsPerChunk": 3,
+        "uppercase": false,
+        "highlight": "5CE1E6",
+        "outline": 7,
+        "maxChars": 16,
+        "tilt": 1.5
+      },
+      "shotSeconds": 1.7,
+      "yearStamp": true,
+      "music": [
+        "assets/audio/beat.m4a",
+        "assets/audio/beat-slow.m4a"
+      ],
+      "musicVolume": 0.12,
+      "sfx": {
+        "cut": "assets/audio/sfx-whoosh.m4a",
+        "volume": 0.35,
+        "stamp": "assets/audio/sfx-boom.m4a",
+        "sticker": "assets/audio/sfx-ding.m4a"
+      },
+      "accents": [
+        "5CE1E6",
+        "FFD166",
+        "FF7AA2"
+      ],
+      "shake": false
+    },
+    "brainrot": {
+      "layout": "full",
+      "look": "punchy",
+      "shotSeconds": 1.15,
+      "yearStamp": true,
+      "music": [
+        "assets/audio/beat-fast.m4a",
+        "assets/audio/beat.m4a"
+      ],
+      "musicVolume": 0.14,
+      "caption": {
+        "font": "Impact",
+        "size": 128,
+        "y": 1470,
+        "wordsPerChunk": 2,
+        "maxChars": 17,
+        "uppercase": true,
+        "highlight": "FFE600",
+        "outline": 10,
+        "tilt": 3
+      },
+      "sfx": {
+        "cut": "assets/audio/sfx-whoosh.m4a",
+        "stamp": "assets/audio/sfx-boom.m4a",
+        "sticker": "assets/audio/sfx-ding.m4a",
+        "volume": 0.5
+      },
+      "accents": [
+        "FFE600",
+        "00E5FF",
+        "FF4FD8",
+        "7CFF4F",
+        "FF8A00"
+      ],
+      "shake": true
+    }
+  }
+}
