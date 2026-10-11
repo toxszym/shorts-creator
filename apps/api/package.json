@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "nest build",
-    "dev": "nest start --watch",
-    "start": "node dist/main.js"
+    "dev": "nest start --watch --exec \"node --env-file-if-exists=../../.env\"",
+    "start": "node --env-file-if-exists=../../.env dist/main.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.132.1",
