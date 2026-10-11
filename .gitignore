@@ -6,3 +6,4 @@ out
 .cache
 data/objects.live.json
 .DS_Store
+*.tsbuildinfo
