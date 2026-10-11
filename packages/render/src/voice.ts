@@ -23,6 +23,14 @@ export const saySynthesize: Synthesize = async (text, outPath) => {
   await run("say", ["-v", "Zosia", "-r", "195", "-o", outPath, "--data-format=LEI16@44100", text]);
 };
 
+/** Fallback voice on Linux: Polish espeak-ng voice. Writes 22.05 kHz WAV; voiceSentences resamples it. */
+export const espeakSynthesize: Synthesize = async (text, outPath) => {
+  await run("espeak-ng", ["-v", "pl", "-s", "175", "-w", outPath, text]);
+};
+
+/** System voice for the current platform: `say` on macOS, espeak-ng elsewhere. */
+export const systemSynthesize: Synthesize = process.platform === "darwin" ? saySynthesize : espeakSynthesize;
+
 /** Rozkłada czas zdania na słowa proporcjonalnie do ich długości, z pauzą po znakach przestankowych. */
 function estimateWords(text: string, start: number, end: number): Word[] {
   const tokens = text.split(/\s+/).filter(Boolean);
@@ -42,7 +50,7 @@ const GAP = 0.14;
  * Nagrywa lektora zdanie po zdaniu. Dzięki temu granice scen są dokładne,
  * a czasy słów wewnątrz zdania wystarczy oszacować.
  */
-export async function voiceSentences(texts: string[], workDir: string, synthesize: Synthesize = saySynthesize, ext = "wav", pauses: number[] = []): Promise<VoiceResult> {
+export async function voiceSentences(texts: string[], workDir: string, synthesize: Synthesize = systemSynthesize, ext = "wav", pauses: number[] = []): Promise<VoiceResult> {
   await mkdir(workDir, { recursive: true });
   const sentences: VoicedSentence[] = [];
   const parts: string[] = [];

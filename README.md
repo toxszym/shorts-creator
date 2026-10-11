@@ -4,7 +4,7 @@ Aplikacja zamienia temat w pionowy short zmontowany z archiwalnych zdjęć. W tr
 
 ## Uruchomienie
 
-Wymagania: Node 22, pnpm, ffmpeg z libass, macOS (zapasowy lektor to systemowy głos Zosia).
+Wymagania: Node 22, pnpm, ffmpeg z libass oraz systemowy lektor: na macOS głos Zosia (`say`), na Linuksie `espeak-ng` z głosem polskim (np. `sudo apt install espeak-ng`).
 
 ```bash
 pnpm install
