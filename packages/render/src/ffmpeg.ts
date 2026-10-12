@@ -1,8 +1,9 @@
 import { spawn } from "node:child_process";
 
-export function run(cmd: string, args: string[], opts: { cwd?: string; onStdout?: (chunk: string) => void } = {}): Promise<string> {
+export function run(cmd: string, args: string[], opts: { cwd?: string; input?: string; onStdout?: (chunk: string) => void } = {}): Promise<string> {
   return new Promise((resolve, reject) => {
     const child = spawn(cmd, args, { cwd: opts.cwd });
+    child.stdin.end(opts.input);
     let out = "";
     let err = "";
     child.stdout.on("data", (d) => {

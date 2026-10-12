@@ -4,10 +4,11 @@ Aplikacja zamienia temat w pionowy short zmontowany z archiwalnych zdjęć. W tr
 
 ## Uruchomienie
 
-Wymagania: Node 22, pnpm, ffmpeg z libass, macOS (zapasowy lektor to systemowy głos Zosia).
+Wymagania: Node 22, pnpm, ffmpeg z libass oraz lektor: na macOS systemowy głos Zosia (`say`), na Linuksie (x86_64) [Piper](https://github.com/rhasspy/piper) z polskim głosem `mc_speech` (licencja CC0), który pobiera `pnpm fetch:voice` do `.cache/piper`.
 
 ```bash
 pnpm install
+pnpm fetch:voice    # tylko Linux: Piper i głos mc_speech
 pnpm build          # paczka render + API
 pnpm api            # NestJS na http://localhost:4000
 pnpm web            # Next.js na http://localhost:3000
