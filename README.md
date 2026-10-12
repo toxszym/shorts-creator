@@ -4,7 +4,7 @@ Aplikacja zamienia temat w pionowy short zmontowany z archiwalnych zdjęć. W tr
 
 ## Uruchomienie
 
-Wymagania: Node 22, pnpm, ffmpeg z libass oraz lektor: na macOS systemowy głos Zosia (`say`), na Linuksie (x86_64) [Piper](https://github.com/rhasspy/piper) z polskim głosem `mc_speech` (licencja CC0), który pobiera `pnpm fetch:voice` do `.cache/piper`.
+Wymagania: Node 22.9+, pnpm, ffmpeg z libass oraz lektor: na macOS systemowy głos Zosia (`say`), na Linuksie (x86_64) [Piper](https://github.com/rhasspy/piper) z polskim głosem `mc_speech` (licencja CC0), który pobiera `pnpm fetch:voice` do `.cache/piper`.
 
 ```bash
 pnpm install
@@ -23,6 +23,8 @@ Scenariusz pisze model językowy. API wybiera go według zmiennych środowiskowy
 | brak obu | Przygotowane pliki z `samples/` albo same opisy archiwalne |
 
 Przykład: `KRONIKA_WRITER=cli pnpm api`.
+
+Zmienne można też zapisać w pliku `.env` w katalogu głównym: skopiuj `.env.example` do `.env` i uzupełnij. API wczytuje go przy starcie (`pnpm api` i tryb `dev`), a zmienne ustawione w powłoce mają pierwszeństwo.
 
 `pnpm fetch:archive` pobiera ponownie zdjęcia i opisy z Wikimedia Commons według `data/seed-titles.json`.
 `pnpm sample` renderuje film z pliku `samples/gdynia.script.json` bez udziału API.
